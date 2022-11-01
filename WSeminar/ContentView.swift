@@ -9,13 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List{
+                Section(header: Text("Grundrechenarten")){
+                    NavigationLink(destination: AddSub()) {
+                        Text("Addition & Subtraktion")
+                    }
+                    NavigationLink(destination: Multiplikation()) {
+                        Text("Multiplikation")
+                    }
+                    NavigationLink(destination: Division()) {
+                        Text("Division")
+                    }
+                }
+                Section(header: Text("Rotation")) {
+                    NavigationLink(destination: Playground()) {
+                        Text("Spielwiese")
+                    }
+                    NavigationLink(destination: Slerp()) {
+                        Text("slerp")
+                    }
+                    NavigationLink(destination: Spline()) {
+                        Text("spline")
+                    }
+                    NavigationLink(destination: Gyro()) {
+                        Text("Gyro")
+                    }
+                }
+            }
+            .navigationTitle(Text("Quaternionen"))
+            
         }
-        .padding()
+        .accentColor(.orange)
     }
 }
 

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A4634672904333400475FBA /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4634662904333400475FBA /* Snapshot.swift */; };
+		7A4773EF2900728D0014E7FD /* AddSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773EE2900728D0014E7FD /* AddSub.swift */; };
+		7A4773F1290072B10014E7FD /* Multiplikation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773F0290072B10014E7FD /* Multiplikation.swift */; };
+		7A4773F3290072C70014E7FD /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773F2290072C70014E7FD /* Division.swift */; };
+		7A4773F62900730A0014E7FD /* Slerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773F52900730A0014E7FD /* Slerp.swift */; };
+		7A4773F8290073180014E7FD /* Spline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773F7290073180014E7FD /* Spline.swift */; };
+		7A4773FA290073260014E7FD /* Gyro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773F9290073260014E7FD /* Gyro.swift */; };
+		7A4773FC2900744A0014E7FD /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4773FB2900744A0014E7FD /* Playground.swift */; };
 		7A5651D728F08BE2004DBA22 /* WSeminarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5651D628F08BE2004DBA22 /* WSeminarApp.swift */; };
 		7A5651D928F08BE2004DBA22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5651D828F08BE2004DBA22 /* ContentView.swift */; };
 		7A5651DB28F08BE3004DBA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5651DA28F08BE3004DBA22 /* Assets.xcassets */; };
@@ -14,7 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A5651D328F08BE2004DBA22 /* WSeminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSeminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4634662904333400475FBA /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		7A4773EE2900728D0014E7FD /* AddSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSub.swift; sourceTree = "<group>"; };
+		7A4773F0290072B10014E7FD /* Multiplikation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplikation.swift; sourceTree = "<group>"; };
+		7A4773F2290072C70014E7FD /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
+		7A4773F52900730A0014E7FD /* Slerp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slerp.swift; sourceTree = "<group>"; };
+		7A4773F7290073180014E7FD /* Spline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spline.swift; sourceTree = "<group>"; };
+		7A4773F9290073260014E7FD /* Gyro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gyro.swift; sourceTree = "<group>"; };
+		7A4773FB2900744A0014E7FD /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
+		7A5651D328F08BE2004DBA22 /* ExploreQuaternions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExploreQuaternions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5651D628F08BE2004DBA22 /* WSeminarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSeminarApp.swift; sourceTree = "<group>"; };
 		7A5651D828F08BE2004DBA22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A5651DA28F08BE3004DBA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +48,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A4773ED290072490014E7FD /* Grundrechenarten */ = {
+			isa = PBXGroup;
+			children = (
+				7A4773EE2900728D0014E7FD /* AddSub.swift */,
+				7A4773F0290072B10014E7FD /* Multiplikation.swift */,
+				7A4773F2290072C70014E7FD /* Division.swift */,
+			);
+			path = Grundrechenarten;
+			sourceTree = "<group>";
+		};
+		7A4773F4290072CE0014E7FD /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+				7A4773F52900730A0014E7FD /* Slerp.swift */,
+				7A4773F7290073180014E7FD /* Spline.swift */,
+				7A4773F9290073260014E7FD /* Gyro.swift */,
+				7A4773FB2900744A0014E7FD /* Playground.swift */,
+			);
+			path = Rotation;
+			sourceTree = "<group>";
+		};
 		7A5651CA28F08BE2004DBA22 = {
 			isa = PBXGroup;
 			children = (
@@ -43,7 +80,7 @@
 		7A5651D428F08BE2004DBA22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A5651D328F08BE2004DBA22 /* WSeminar.app */,
+				7A5651D328F08BE2004DBA22 /* ExploreQuaternions.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +88,13 @@
 		7A5651D528F08BE2004DBA22 /* WSeminar */ = {
 			isa = PBXGroup;
 			children = (
+				7A4773F4290072CE0014E7FD /* Rotation */,
+				7A4773ED290072490014E7FD /* Grundrechenarten */,
 				7A5651D628F08BE2004DBA22 /* WSeminarApp.swift */,
 				7A5651D828F08BE2004DBA22 /* ContentView.swift */,
 				7A5651DA28F08BE3004DBA22 /* Assets.xcassets */,
 				7A5651DC28F08BE3004DBA22 /* Preview Content */,
+				7A4634662904333400475FBA /* Snapshot.swift */,
 			);
 			path = WSeminar;
 			sourceTree = "<group>";
@@ -70,9 +110,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A5651D228F08BE2004DBA22 /* WSeminar */ = {
+		7A5651D228F08BE2004DBA22 /* ExploreQuaternions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A5651E128F08BE3004DBA22 /* Build configuration list for PBXNativeTarget "WSeminar" */;
+			buildConfigurationList = 7A5651E128F08BE3004DBA22 /* Build configuration list for PBXNativeTarget "ExploreQuaternions" */;
 			buildPhases = (
 				7A5651CF28F08BE2004DBA22 /* Sources */,
 				7A5651D028F08BE2004DBA22 /* Frameworks */,
@@ -82,9 +122,9 @@
 			);
 			dependencies = (
 			);
-			name = WSeminar;
+			name = ExploreQuaternions;
 			productName = WSeminar;
-			productReference = 7A5651D328F08BE2004DBA22 /* WSeminar.app */;
+			productReference = 7A5651D328F08BE2004DBA22 /* ExploreQuaternions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7A5651CE28F08BE2004DBA22 /* Build configuration list for PBXProject "WSeminar" */;
+			buildConfigurationList = 7A5651CE28F08BE2004DBA22 /* Build configuration list for PBXProject "ExploreQuaternions" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A5651D228F08BE2004DBA22 /* WSeminar */,
+				7A5651D228F08BE2004DBA22 /* ExploreQuaternions */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4773F62900730A0014E7FD /* Slerp.swift in Sources */,
+				7A4773F8290073180014E7FD /* Spline.swift in Sources */,
+				7A4773FC2900744A0014E7FD /* Playground.swift in Sources */,
 				7A5651D928F08BE2004DBA22 /* ContentView.swift in Sources */,
+				7A4773F1290072B10014E7FD /* Multiplikation.swift in Sources */,
+				7A4773F3290072C70014E7FD /* Division.swift in Sources */,
+				7A4773EF2900728D0014E7FD /* AddSub.swift in Sources */,
+				7A4773FA290073260014E7FD /* Gyro.swift in Sources */,
 				7A5651D728F08BE2004DBA22 /* WSeminarApp.swift in Sources */,
+				7A4634672904333400475FBA /* Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +318,14 @@
 				DEVELOPMENT_TEAM = SVSHDX7X7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Export image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +350,14 @@
 				DEVELOPMENT_TEAM = SVSHDX7X7B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Export image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A5651CE28F08BE2004DBA22 /* Build configuration list for PBXProject "WSeminar" */ = {
+		7A5651CE28F08BE2004DBA22 /* Build configuration list for PBXProject "ExploreQuaternions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A5651DF28F08BE3004DBA22 /* Debug */,
@@ -329,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A5651E128F08BE3004DBA22 /* Build configuration list for PBXNativeTarget "WSeminar" */ = {
+		7A5651E128F08BE3004DBA22 /* Build configuration list for PBXNativeTarget "ExploreQuaternions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A5651E228F08BE3004DBA22 /* Debug */,
