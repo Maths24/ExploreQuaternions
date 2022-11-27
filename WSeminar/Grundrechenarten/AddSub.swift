@@ -9,9 +9,21 @@
 import SwiftUI
 
 struct AddSub: View {
+    var q1 = [0.0, 0.0, 0.0, 0.0]
+    var q2 = [0.0, 0.0, 0.0, 0.0]
+   @State  var numpad = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("x_0")
+            .onTapGesture {
+                numpad.toggle()
+            }
+        if numpad {
+            Numpad(width: 120, height: 160)
+
+        }
     }
+    
+    
 }
 
 struct Addition_Previews: PreviewProvider {

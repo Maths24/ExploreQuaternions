@@ -19,6 +19,11 @@
 		7A5651D928F08BE2004DBA22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5651D828F08BE2004DBA22 /* ContentView.swift */; };
 		7A5651DB28F08BE3004DBA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5651DA28F08BE3004DBA22 /* Assets.xcassets */; };
 		7A5651DE28F08BE3004DBA22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5651DD28F08BE3004DBA22 /* Preview Assets.xcassets */; };
+		7A69C20629326A8800525019 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C20529326A8800525019 /* Template.swift */; };
+		7A69C2082932711D00525019 /* GyroExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C2072932711D00525019 /* GyroExtension.swift */; };
+		7A69C20A29338A2000525019 /* SceneKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C20929338A2000525019 /* SceneKitSupport.swift */; };
+		7ACF0D7929196766000EC057 /* Numpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF0D7829196766000EC057 /* Numpad.swift */; };
+		7AEF93BE291C1B17000F9544 /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEF93BD291C1B17000F9544 /* Rendering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		7A5651D828F08BE2004DBA22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A5651DA28F08BE3004DBA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A5651DD28F08BE3004DBA22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A69C20529326A8800525019 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		7A69C2072932711D00525019 /* GyroExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroExtension.swift; sourceTree = "<group>"; };
+		7A69C20929338A2000525019 /* SceneKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitSupport.swift; sourceTree = "<group>"; };
+		7ACF0D7829196766000EC057 /* Numpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numpad.swift; sourceTree = "<group>"; };
+		7AEF93BD291C1B17000F9544 /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 				7A4773EE2900728D0014E7FD /* AddSub.swift */,
 				7A4773F0290072B10014E7FD /* Multiplikation.swift */,
 				7A4773F2290072C70014E7FD /* Division.swift */,
+				7ACF0D7829196766000EC057 /* Numpad.swift */,
 			);
 			path = Grundrechenarten;
 			sourceTree = "<group>";
@@ -88,6 +99,8 @@
 		7A5651D528F08BE2004DBA22 /* WSeminar */ = {
 			isa = PBXGroup;
 			children = (
+				7A69C20429326A6E00525019 /* Presentation */,
+				7AEF93BC291C1AFF000F9544 /* Extensions */,
 				7A4773F4290072CE0014E7FD /* Rotation */,
 				7A4773ED290072490014E7FD /* Grundrechenarten */,
 				7A5651D628F08BE2004DBA22 /* WSeminarApp.swift */,
@@ -105,6 +118,24 @@
 				7A5651DD28F08BE3004DBA22 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A69C20429326A6E00525019 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7A69C20529326A8800525019 /* Template.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7AEF93BC291C1AFF000F9544 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AEF93BD291C1B17000F9544 /* Rendering.swift */,
+				7A69C2072932711D00525019 /* GyroExtension.swift */,
+				7A69C20929338A2000525019 /* SceneKitSupport.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +209,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4773F62900730A0014E7FD /* Slerp.swift in Sources */,
+				7ACF0D7929196766000EC057 /* Numpad.swift in Sources */,
+				7A69C2082932711D00525019 /* GyroExtension.swift in Sources */,
+				7A69C20629326A8800525019 /* Template.swift in Sources */,
 				7A4773F8290073180014E7FD /* Spline.swift in Sources */,
 				7A4773FC2900744A0014E7FD /* Playground.swift in Sources */,
 				7A5651D928F08BE2004DBA22 /* ContentView.swift in Sources */,
 				7A4773F1290072B10014E7FD /* Multiplikation.swift in Sources */,
+				7A69C20A29338A2000525019 /* SceneKitSupport.swift in Sources */,
 				7A4773F3290072C70014E7FD /* Division.swift in Sources */,
 				7A4773EF2900728D0014E7FD /* AddSub.swift in Sources */,
+				7AEF93BE291C1B17000F9544 /* Rendering.swift in Sources */,
 				7A4773FA290073260014E7FD /* Gyro.swift in Sources */,
 				7A5651D728F08BE2004DBA22 /* WSeminarApp.swift in Sources */,
 				7A4634672904333400475FBA /* Snapshot.swift in Sources */,

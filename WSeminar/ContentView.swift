@@ -40,7 +40,6 @@ struct ContentView: View {
             .navigationTitle(Text("Quaternionen"))
             
         }
-        .accentColor(.orange)
     }
 }
 
