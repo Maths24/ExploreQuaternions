@@ -12,6 +12,7 @@ import ModelIO
 import SceneKit
 
 var gameScene = SCNScene()
+var gE = GyroExtension()
 
 
 
@@ -36,53 +37,30 @@ struct Gyro: View {
         }(), options: .allowsCameraControl)
     }
     
-    @State var gyroExtension = GyroExtension()
+   // @State var gyroExtension = GyroExtension()
     
     
     var body: some View {
         ZStack {
             sceneView
-            
+                .background(Color("background"))
+
         }
         .ignoresSafeArea()
         .onReceive(timer) {_ in
             update()
         }
         .onAppear {
-            initAll()
+            gE.render = true
             motionManager.startDeviceMotionUpdates()
+        }
+        .onDisappear {
+            gE.removeCube()
+
         }
     }
 
-    func initAll() {
-        initView()
-        initScene()
-        initCamera()
-        createCoordinatesystem()
-        
-    }
-    
-    func initView() {
-        gameView = SCNView()
-        gameView.allowsCameraControl = false
-        gameView.autoenablesDefaultLighting = true
-    }
-    
-    func initScene() {
-        gameScene = setupSceneKit()
-        //gameView.scene = gameScene
-        
-        gameView.isPlaying = true
-    }
-    
-    func initCamera() {
-        cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        
-        cameraNode.position = SCNVector3(x: 0, y: 5, z: 10)
-        
-        gameScene.rootNode.addChildNode(cameraNode)
-    }
+  
     
     
     func update() {
@@ -109,9 +87,9 @@ struct Gyro: View {
     
     func rotateCube() {
  
-        gyroExtension.setGyroQuad(gyroQuad: gyroQuad)
+        gE.setGyroQuad(gyroQuad: gyroQuad)
         
-        displaylink = CADisplayLink(target: gyroExtension, selector: #selector(gyroExtension.performRotation))
+        displaylink = CADisplayLink(target: gE, selector: #selector(gE.performRotation))
         displaylink?.add(to: .current,
                          forMode: .default)
         

@@ -40,6 +40,12 @@ struct ContentView: View {
             .navigationTitle(Text("Quaternionen"))
             
         }
+        .onAppear {
+                gameScene = setupSceneKit()
+                //gameView.scene = gameScene
+                
+             
+        }
     }
 }
 

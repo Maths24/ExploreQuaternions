@@ -14,7 +14,8 @@ class GyroExtension: NSObject, ObservableObject {
     var gyroQuad: simd_quatf = simd_quatf()
     var vertexRotations: [simd_quatf] = [simd_quatf()]
     var displaylink: CADisplayLink = CADisplayLink()
-    
+    var newCube = [simd_float3]()
+    var render = true
     func setpC (pC: SCNNode) {
         self.pC = pC
     }
@@ -31,6 +32,10 @@ class GyroExtension: NSObject, ObservableObject {
         self.displaylink = displayLink
     }
     
+    func getCube() -> [simd_float3] {
+        return newCube
+    }
+    
     var cube: [simd_float3] = [
         simd_float3(x: -0.5, y: -0.5, z: 0.5),
         simd_float3(x: 0.5, y: -0.5, z: 0.5),
@@ -43,20 +48,22 @@ class GyroExtension: NSObject, ObservableObject {
         ]
 
     @objc func performRotation() {
-        
-        //gameScene.rootNode.childNodes.filter({ $0.name == "x" }).forEach({ $0.removeFromParentNode() })
-        removeCube()
+        if render {
+            //gameScene.rootNode.childNodes.filter({ $0.name == "x" }).forEach({ $0.removeFromParentNode() })
+            removeCube()
 
-        var newCube = cube
-        for i in 0..<newCube.count {
-            let q = gyroQuad.act(cube[i])
-          
-            newCube[i] = q
+            newCube = cube
+            for i in 0..<newCube.count {
+                let q = gyroQuad.act(cube[i])
+              
+                newCube[i] = q
+            }
+            
+            pC = addCube(vertices: newCube)
+            gameScene.rootNode.addChildNode(pC)
+    //        print(newCube)
         }
         
-        pC = addCube(vertices: newCube)
-        gameScene.rootNode.addChildNode(pC)
-//        print(newCube)
     }
     
     func renderCube() -> SCNNode {
@@ -66,7 +73,7 @@ class GyroExtension: NSObject, ObservableObject {
     
     func removeCube() {
         pC.removeFromParentNode()
-        gameScene.rootNode.childNodes.filter({ $0.name == "x" }).forEach({ $0.removeFromParentNode() })
+        //gameScene.rootNode.childNodes.filter({ $0.name == "x" }).forEach({ $0.removeFromParentNode() })
     }
     
     func addCube(vertices: [simd_float3]) -> SCNNode {
@@ -109,7 +116,7 @@ class GyroExtension: NSObject, ObservableObject {
         geometry.firstMaterial?.isDoubleSided = true
         geometry.firstMaterial?.diffuse.contents = UIColor.orange
         //geometry.firstMaterial?.lightingModel = .physicallyBased
-        geometry.firstMaterial?.transparency = 0.8
+        geometry.firstMaterial?.transparency = 1
         let node = SCNNode(geometry: geometry)
         node.simdPosition = simd_float3(0, -0.5, 0)
         node.name = "x"

@@ -11,10 +11,9 @@ import SceneKit
 
 extension View {
     
-    
-    
     func setupSceneKit(shadows: Bool = true) ->SCNScene {
         let scene = gameScene
+
         scene.background.contents = UIColor(Color("background"))
         
         let lookAtNode = SCNNode()
@@ -57,17 +56,14 @@ extension View {
         scene.rootNode.addChildNode(lightNode)
         scene.rootNode.addChildNode(cameraNode)
         scene.rootNode.addChildNode(ambientNode)
-       
-        createCoordinatesystem()
-        createArea()
-        
-        
-
+   
+        scene.rootNode.addChildNode(createCoordinatesystem())
+        gameScene = scene
         return scene
     }
    
     
-    func createCoordinatesystem() {
+    func createCoordinatesystem() -> SCNNode{
         let arrowx =  createArrow(color: .gray)
         arrowx.simdLocalRotate(by: simd_quatf(angle: -.pi/2, axis: simd_float3(0, 0, 1)))
         let arrowy =  createArrow(color: .gray)
@@ -81,16 +77,19 @@ extension View {
         coornode.addChildNode(arrowz)
         coornode.simdPosition = simd_float3(0,-0.5, 0)
         
-        gameScene.rootNode.addChildNode(coornode)
         let areaNode = createArea()
         areaNode.simdPosition = simd_float3(0,-0.5, 0)
 
-        gameScene.rootNode.addChildNode(areaNode)
         
         let labelNode = createLabelsForCoordinateAxis()
         labelNode.simdPosition = simd_float3(0, -0.5, 0)
        
-        gameScene.rootNode.addChildNode(labelNode)
+        let wholeNode = SCNNode()
+        wholeNode.addChildNode(coornode)
+        wholeNode.addChildNode(areaNode)
+        wholeNode.addChildNode(labelNode)
+        
+        return wholeNode
     }
     
     func createArea() -> SCNNode {

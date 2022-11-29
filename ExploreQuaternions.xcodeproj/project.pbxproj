@@ -22,8 +22,8 @@
 		7A69C20629326A8800525019 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C20529326A8800525019 /* Template.swift */; };
 		7A69C2082932711D00525019 /* GyroExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C2072932711D00525019 /* GyroExtension.swift */; };
 		7A69C20A29338A2000525019 /* SceneKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C20929338A2000525019 /* SceneKitSupport.swift */; };
+		7A69C20C2933B28900525019 /* SlerpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69C20B2933B28900525019 /* SlerpExtension.swift */; };
 		7ACF0D7929196766000EC057 /* Numpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF0D7829196766000EC057 /* Numpad.swift */; };
-		7AEF93BE291C1B17000F9544 /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEF93BD291C1B17000F9544 /* Rendering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,8 @@
 		7A69C20529326A8800525019 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		7A69C2072932711D00525019 /* GyroExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroExtension.swift; sourceTree = "<group>"; };
 		7A69C20929338A2000525019 /* SceneKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitSupport.swift; sourceTree = "<group>"; };
+		7A69C20B2933B28900525019 /* SlerpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlerpExtension.swift; sourceTree = "<group>"; };
 		7ACF0D7829196766000EC057 /* Numpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numpad.swift; sourceTree = "<group>"; };
-		7AEF93BD291C1B17000F9544 /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +131,9 @@
 		7AEF93BC291C1AFF000F9544 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7AEF93BD291C1B17000F9544 /* Rendering.swift */,
 				7A69C2072932711D00525019 /* GyroExtension.swift */,
 				7A69C20929338A2000525019 /* SceneKitSupport.swift */,
+				7A69C20B2933B28900525019 /* SlerpExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +210,7 @@
 			files = (
 				7A4773F62900730A0014E7FD /* Slerp.swift in Sources */,
 				7ACF0D7929196766000EC057 /* Numpad.swift in Sources */,
+				7A69C20C2933B28900525019 /* SlerpExtension.swift in Sources */,
 				7A69C2082932711D00525019 /* GyroExtension.swift in Sources */,
 				7A69C20629326A8800525019 /* Template.swift in Sources */,
 				7A4773F8290073180014E7FD /* Spline.swift in Sources */,
@@ -219,7 +220,6 @@
 				7A69C20A29338A2000525019 /* SceneKitSupport.swift in Sources */,
 				7A4773F3290072C70014E7FD /* Division.swift in Sources */,
 				7A4773EF2900728D0014E7FD /* AddSub.swift in Sources */,
-				7AEF93BE291C1B17000F9544 /* Rendering.swift in Sources */,
 				7A4773FA290073260014E7FD /* Gyro.swift in Sources */,
 				7A5651D728F08BE2004DBA22 /* WSeminarApp.swift in Sources */,
 				7A4634672904333400475FBA /* Snapshot.swift in Sources */,
